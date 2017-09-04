@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('Public.menu',function($view){
             $menuary =array(
-                '系统管理'=>array('icon'=>'xe62d;','submenu'=>array('user'=>'管理员设置','webinfo'=>'网站信息','logininfo'=>'登录信息管理','r_access'=>'注册及访问控制','node'=>'节点管理')),
+                '系统管理'=>array('icon'=>'xe62d;','submenu'=>array('home'=>'首页','user'=>'管理员设置','webinfo'=>'网站信息','logininfo'=>'登录信息管理','r_access'=>'注册及访问控制','node'=>'节点管理')),
                 '用户中心'=>array('icon'=>'xe62d;','submenu'=>array('userlist'=>'用户列表','useradd'=>'用户增加')),
                 '众筹管理'=>array('icon'=>'xe62d;','submenu'=>array('zctype'=>'众筹类别','zclist'=>'众筹列表','zcadd'=>'增加众筹项目')),
                 '订单管理'=>array('icon'=>'xe62d;','submenu'=>array('orderlist'=>'订单列表')),

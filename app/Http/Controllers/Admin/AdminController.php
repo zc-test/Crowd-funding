@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function index()
     {
 
-        return view('Admin.user.admin');
+        return view('Admin.sys.admin');
     }
 
     /**
@@ -26,7 +26,7 @@ class AdminController extends Controller
     public function create()
     {
 
-        return view('Admin.user.add');
+        return view('Admin.sys.add');
     }
 
     /**
