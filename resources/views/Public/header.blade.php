@@ -10,11 +10,15 @@
     <link rel="Bookmark" href="favicon.ico" >
     <link rel="Shortcut Icon" href="favicon.ico" />
 
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/admin/H-ui.min.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/admin/H-ui.admin.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/admin/iconfont.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/admin/skin/default/skin.css') }}" id="skin" />
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/admin/style.css') }}" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="{{asset('admin/lib/html5.js')}}"></script>
+    <script type="text/javascript" src="{{asset('admin/lib/respond.min.js')}}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/static/h-ui/css/H-ui.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/static/h-ui.admin/css/H-ui.admin.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/lib/Hui-iconfont/1.0.8/iconfont.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/static/h-ui.admin/skin/default/skin.css')}}" id="skin" />
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/static/h-ui.admin/css/style.css')}}" />
     <!--[if IE 6]>
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
@@ -71,5 +75,23 @@
     </div>
 </header>
 <!--/_header 作为公共模版分离出去-->
-@extends('public.menu')
+@include('Public.menu')
+@section('content')
+    @show
+        <!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{{asset('admin/lib/jquery/1.9.1/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin/lib/layer/2.4/layer.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin/static/h-ui/js/H-ui.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin/static/h-ui.admin/js/H-ui.admin.page.js')}}"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+    $('.current').parent().parent().css('display','block');
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+@section('script')
+    @show
+</body>
+</html>
 
